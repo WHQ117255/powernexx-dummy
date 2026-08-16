@@ -24,7 +24,7 @@ export const getMeta = () => request('/meta');
 export const parseMessage = (text) =>
   request('/parse', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) });
 export const updateItems = (items) =>
-  request('/items/update', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items }) });
+  request('/update', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ items }) });
 export const getTransactions = (page = 1, pageSize = 50) =>
   request(`/transactions?page=${page}&pageSize=${pageSize}`);
 

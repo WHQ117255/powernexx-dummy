@@ -75,8 +75,8 @@ router.post('/parse', async (req, res, next) => {
   }
 });
 
-/** POST /api/items/update —— 手动更新。body: 单条 或 {items:[...]}。 */
-router.post('/items/update', async (req, res, next) => {
+/** POST /api/update —— 手动更新。body: 单条 或 {items:[...]}。 */
+router.post('/update', async (req, res, next) => {
   try {
     const body = req.body || {};
     const list = Array.isArray(body.items) ? body.items : [body];
